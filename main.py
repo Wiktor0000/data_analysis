@@ -72,3 +72,28 @@ print(f"Average - political stability rate: {avg_political_stability_rate:.2f}")
 print(f"Deviation - political stability rate: {std_political_stability_rate:.2f}")
 print(f"Variation coefficient - politicial stability rate: {vk_political_stability_rate:.2f}")
 print()
+
+#wk_miernik wag
+wk_pollution = vk_pollution / (vk_pollution + vk_higher_education + vk_gdp +
+                               vk_unemployment_rate + vk_amount_of_doctor + vk_political_stability_rate)
+print(f"Weights - Pollution: {wk_pollution:.2f}")
+
+wk_higher_education = vk_higher_education / (vk_pollution + vk_higher_education + vk_gdp +
+                               vk_unemployment_rate + vk_amount_of_doctor + vk_political_stability_rate)
+print(f"Weights - Higher Education: {wk_higher_education:.2f}")
+
+wk_gdp = vk_gdp / (vk_pollution + vk_higher_education + vk_gdp +
+                               vk_unemployment_rate + vk_amount_of_doctor + vk_political_stability_rate)
+print(f"Weights - GDP per capita: {wk_gdp:.2f}")
+
+wk_unemployment_rate = vk_unemployment_rate / (vk_pollution + vk_higher_education + vk_gdp +
+                               vk_unemployment_rate + vk_amount_of_doctor + vk_political_stability_rate)
+print(f"Weights - Unemployment rate: {wk_unemployment_rate:.2f}")
+
+wk_amount_of_doctor = vk_amount_of_doctor / (vk_pollution + vk_higher_education + vk_gdp +
+                               vk_unemployment_rate + vk_amount_of_doctor + vk_political_stability_rate)
+print(f"Weights - Amount of doctors per 1000 people: {wk_amount_of_doctor:.2f}")
+
+wk_political_stability_rate = vk_political_stability_rate / (vk_pollution + vk_higher_education + vk_gdp +
+                               vk_unemployment_rate + vk_amount_of_doctor + vk_political_stability_rate)
+print(f"Weights - Political stability rate: {wk_amount_of_doctor:.2f}")
